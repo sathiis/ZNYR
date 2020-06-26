@@ -1,6 +1,6 @@
 {
   "name": "jitsi-meet-electron",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "ZNYR App",
   "main": "./build/main.js",
   "productName": "ZNYR App",
@@ -34,7 +34,16 @@
     },
     "win": {
       "icon": "./Znyr.jpg",
-      "target": "nsis"
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+
     },
     "linux": {
       "target": [
@@ -142,6 +151,7 @@
     "react-csv": "^2.0.3",
     "react-datetime": "^2.16.3",
     "react-dom": "next",
+    "react-google-charts": "^3.0.15",
     "react-icons": "^3.10.0",
     "react-image-lightbox": "^5.1.1",
     "react-jutsu": "^2.1.5",
